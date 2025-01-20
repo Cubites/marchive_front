@@ -1,0 +1,7 @@
+/* dev */
+#titlePage{ background-color: aquamarine; }
+/* /dev */
+#titlePage{
+  width: 100%;
+  height: calc(100% - 120px);
+}

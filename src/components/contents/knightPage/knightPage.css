@@ -1,0 +1,186 @@
+#knightPage{
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* page guide */
+#knightPage>.guideBox{
+  width: 80%;
+  height: 100px;
+  margin: 30px 0;
+}
+#knightPage>.guideBox>.inputGuide{
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  color: #000;
+}
+#knightPage>.guideBox>.inputGuide>div{ margin: 5px 0; }
+#knightPage>.guideBox>.inputGuide>div>span{ font-size: bold; color: red; }
+
+/* member info box */
+#knightPage>.memberList{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;  
+}
+#knightPage>.memberList>.memberBox{
+  width: 160px;
+  height: 500px;
+  margin: 30px 10px 10px;
+  position: relative;
+}
+
+/** input box about member info **/
+#knightPage>.memberList>.memberBox>.memberValueBox{
+  width: 100%;
+  height: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  border: 2px solid #5785C1;
+  margin-bottom: 10px;
+}
+#knightPage>.memberList>.memberBox>.memberValueBox>.scriptSearchBtn{
+  width: 150px;
+  height: 30px;
+  border-radius: 5px;
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  background-color: #5785C1;
+  color: #fff;
+}
+#knightPage>.memberList>.memberBox>.memberValueBox>.scriptSearchBtn:hover{ cursor: pointer; }
+#knightPage>.memberList>.memberBox>.memberValueBox>.scriptSearchBtn:active{
+  background-color: #39649c;
+}
+#knightPage>.memberList>.memberBox>.memberValueBox>.memberName{
+  font-size: 14px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+#knightPage>.memberList>.memberBox>.memberValueBox>img{
+  width: 50px;
+  height: 50px;
+  object-fit: none;
+  border-radius: 3px;
+}
+#knightPage>.memberList>.memberBox>.memberValueBox>.memberTalent{
+  font-size: 13px;
+  color: #333;
+  margin: 10px 0 5px;
+}
+#knightPage>.memberList>.memberBox>.memberValueBox>.talkFavorBox{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#knightPage>.memberList>.memberBox>.memberValueBox>.talkFavorBox>.title{
+  font-size: 13px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+}
+#knightPage>.memberList>.memberBox>.memberValueBox>.talkFavorBox>.title>div{
+  margin: 4px 0;
+}
+#knightPage>.memberList>.memberBox>.memberValueBox>.talkFavorBox>.selectBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#knightPage>.memberList>.memberBox>.memberValueBox>.talkFavorBox>.selectBox>select{
+  width: 50px;
+  margin: 2px 0;
+}
+
+/** script info box **/
+#knightPage>.memberList>.memberBox>.memberScriptBox{
+  width: 100%;
+  height: 300px;
+  border: 1px solid #C5C5C5;
+}
+
+#knightPage>.memberList>.memberBox>.memberScriptBox>.normalScriptBox,
+#knightPage>.memberList>.memberBox>.memberScriptBox>.specialScriptBox{
+  width: 100%;
+  height: 150px;
+  font-size: 14px;
+}
+#knightPage>.memberList>.memberBox>.memberScriptBox>.normalScriptBox>.header,
+#knightPage>.memberList>.memberBox>.memberScriptBox>.specialScriptBox>.header{
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #C5C5C5;
+}
+#knightPage>.memberList>.memberBox>.memberScriptBox>.normalScriptBox>.subHeader,
+#knightPage>.memberList>.memberBox>.memberScriptBox>.specialScriptBox>.subHeader{
+  width: 100%;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #C5C5C5;
+}
+#knightPage>.memberList>.memberBox>.memberScriptBox>.normalScriptBox>.subHeader div,
+#knightPage>.memberList>.memberBox>.memberScriptBox>.specialScriptBox>.subHeader div{
+  width: calc(100%/3);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#knightPage>.memberList>.memberBox>.lockedMember{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#knightPage>.memberList>.memberBox>.lockedMember>.unlockBtn{
+  width: 150px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #52B981;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #fff;
+  margin: 7px 0;
+  cursor: pointer;
+}
+#knightPage>.memberList>.memberBox>.lockedMember>.unlockBtn:active{
+  background-color: #368f5e;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-use-select: none;
+  user-select: none;
+}
+
+@media (max-width: 1200px) {
+  
+}
+
+@media (max-width: 600px) {
+  
+}

@@ -1,0 +1,113 @@
+#enchantHeader{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #84A5D1;
+  padding-top: 20px;
+}
+#enchantHeader>.nameBox{
+  width: 100px;
+  margin-right: 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-use-select: none;
+  user-select: none;
+}
+#enchantHeader>.nameBox>div{
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+#enchantHeader>.infoBox>.searchBox{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+#enchantHeader>.infoBox>.searchBox>.inputBox{
+  display: flex;
+  flex-direction: row;
+  margin-right: 20px;
+}
+#enchantHeader>.infoBox>.searchBox>.inputBox>.category{
+  width: 70px;
+  height: 30px;
+  font-size: 13px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+#enchantHeader>.infoBox>.searchBox>.inputBox>input{
+  width: 130px;
+  height: 30px;
+  padding-left: 5px;
+}
+#enchantHeader>.infoBox>.searchBox>.buttonBox{
+  display: flex;
+  flex-direction: row;
+}
+#enchantHeader>.infoBox>.searchBox>.buttonBox>.searchBtn,
+#enchantHeader>.infoBox>.searchBox>.buttonBox>.resetBtn{
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-use-select: none;
+  user-select: none;
+}
+#enchantHeader>.infoBox>.searchBox>.buttonBox>.searchBtn{
+  width: 80px;
+  margin-right: 10px;
+  background-color: #fff;
+}
+#enchantHeader>.infoBox>.searchBox>.buttonBox>.searchBtn:active{
+  background-color: #c8d6e9;
+}
+#enchantHeader>.infoBox>.searchBox>.buttonBox>.resetBtn{
+  width: 120px;
+  background-color: #AF4040;
+  color: #fff;
+}
+#enchantHeader>.infoBox>.searchBox>.buttonBox>.resetBtn:active{
+  background-color: #962c2c;
+}
+#enchantHeader>.infoBox>.locationBox{
+  width: 200px;
+  height: 30px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+#enchantHeader>.infoBox>.locationBox>fieldset>label{ 
+  margin: 0 10px;
+}
+#enchantHeader>.infoBox>.locationBox>fieldset>label>input{ 
+  margin-right: 3px;
+}
+#enchantHeader>.infoBox>.statusBox{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#enchantHeader>.infoBox>.statusBox>select{
+  width: 200px;
+  height: 30px;
+  margin-right: 10px;
+}
+#enchantHeader>.infoBox>.statusBox>select>option{
+  text-align: center;
+}
