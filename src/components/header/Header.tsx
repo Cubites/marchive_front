@@ -25,7 +25,7 @@ const Header = () => {
           </div>
           <div>
             <Link to="/enchant">인챈트</Link>
-            <Link to="/skill">염앰</Link>
+            <Link to="/dye">염앰</Link>
             <Link to="/skill">가방</Link>
           </div>
           <div>

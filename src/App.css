@@ -6,6 +6,17 @@
   height: 100%;
 }
 
+.dragNo{
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-use-select: none;
+  user-select: none;
+}
+
+.cursor{
+  cursor: pointer;
+}
+
 @media (max-width: 1200px) {
   #main{
     width: 100%;

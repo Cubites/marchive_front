@@ -5,53 +5,57 @@
   justify-content: center;
   align-items: center;
   background-color: #84A5D1;
-  padding-top: 20px;
+  padding: 20px 0;
 }
-#enchantHeader>.nameBox{
+#enchantHeader>.mainBox .nameBox{
   width: 100px;
-  margin-right: 10px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-use-select: none;
-  user-select: none;
-}
-#enchantHeader>.nameBox>div{
   height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: bold;
-  margin-bottom: 10px;
 }
-#enchantHeader>.infoBox>.searchBox{
+#enchantHeader>.mainBox{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+/** searchBox **/
+#enchantHeader>.mainBox>.searchBox{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+#enchantHeader>.mainBox>.searchBox>.searchInputBox{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-bottom: 10px;
 }
-#enchantHeader>.infoBox>.searchBox>.inputBox{
+#enchantHeader>.mainBox>.searchBox>.searchInputBox>.inputBox{
   display: flex;
   flex-direction: row;
-  margin-right: 20px;
+  flex-wrap: nowrap;
+  margin: 0 10px 10px 0;
 }
-#enchantHeader>.infoBox>.searchBox>.inputBox>.category{
-  width: 70px;
+#enchantHeader>.mainBox>.searchBox>.searchInputBox>.inputBox>.category{
+  width: 60px;
   height: 30px;
   font-size: 13px;
-  cursor: pointer;
   margin-right: 10px;
 }
-#enchantHeader>.infoBox>.searchBox>.inputBox>input{
+#enchantHeader>.mainBox>.searchBox>.searchInputBox>.inputBox>input{
   width: 130px;
   height: 30px;
   padding-left: 5px;
 }
-#enchantHeader>.infoBox>.searchBox>.buttonBox{
+#enchantHeader>.mainBox>.searchBox>.searchInputBox>.buttonBox{
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 0 10px 10px 0;
 }
-#enchantHeader>.infoBox>.searchBox>.buttonBox>.searchBtn,
-#enchantHeader>.infoBox>.searchBox>.buttonBox>.resetBtn{
+#enchantHeader>.mainBox>.searchBox>.searchInputBox>.buttonBox>.searchBtn,
+#enchantHeader>.mainBox>.searchBox>.searchInputBox>.buttonBox>.resetBtn{
   height: 30px;
   display: flex;
   justify-content: center;
@@ -60,54 +64,95 @@
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-use-select: none;
-  user-select: none;
 }
-#enchantHeader>.infoBox>.searchBox>.buttonBox>.searchBtn{
+#enchantHeader>.mainBox>.searchBox>.searchInputBox>.buttonBox>.searchBtn{
   width: 80px;
   margin-right: 10px;
   background-color: #fff;
 }
-#enchantHeader>.infoBox>.searchBox>.buttonBox>.searchBtn:active{
+#enchantHeader>.mainBox>.searchBox>.searchInputBox>.buttonBox>.searchBtn:active{
   background-color: #c8d6e9;
 }
-#enchantHeader>.infoBox>.searchBox>.buttonBox>.resetBtn{
-  width: 120px;
+#enchantHeader>.mainBox>.searchBox>.searchInputBox>.buttonBox>.resetBtn{
+  width: 110px;
   background-color: #AF4040;
   color: #fff;
 }
-#enchantHeader>.infoBox>.searchBox>.buttonBox>.resetBtn:active{
+#enchantHeader>.mainBox>.searchBox>.searchInputBox>.buttonBox>.resetBtn:active{
   background-color: #962c2c;
 }
-#enchantHeader>.infoBox>.locationBox{
+
+/** locationBox **/
+#enchantHeader>.mainBox>.locationBox{
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+}
+#enchantHeader>.mainBox>.locationBox>.locationInputBox{
   width: 200px;
   height: 30px;
-  background-color: #fff;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
-  margin-bottom: 10px;
+  background-color: #fff;
+  margin: 0 10px 10px 0;
 }
-#enchantHeader>.infoBox>.locationBox>fieldset>label{ 
+#enchantHeader>.mainBox>.locationBox>.locationInputBox>label{ 
   margin: 0 10px;
 }
-#enchantHeader>.infoBox>.locationBox>fieldset>label>input{ 
+#enchantHeader>.mainBox>.locationBox>.locationInputBox>label>input{ 
   margin-right: 3px;
 }
-#enchantHeader>.infoBox>.statusBox{
+
+/** statusBox **/
+#enchantHeader>.mainBox>.statusBox{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+#enchantHeader>.mainBox>.statusBox>.statusInputBox{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-#enchantHeader>.infoBox>.statusBox>select{
+#enchantHeader>.mainBox>.statusBox>.statusInputBox>select{
   width: 200px;
   height: 30px;
   margin-right: 10px;
+  margin-bottom: 10px;
 }
-#enchantHeader>.infoBox>.statusBox>select>option{
+#enchantHeader>.mainBox>.statusBox>.statusInputBox>select>option,
+#enchantHeader>.mainBox>.statusBox>.statusInputBox>select>option:disabled{
   text-align: center;
+}
+
+/** partBox **/
+#enchantHeader>.mainBox>.partBox{
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: nowrap; */
+  overflow: hidden;
+}
+#enchantHeader>.mainBox>.partBox>.partInputBox{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#enchantHeader>.mainBox>.partBox>.partInputBox>select{
+  width: 200px;
+  height: 30px;
+  margin: 0 10px 10px 0;
+}
+#enchantHeader>.mainBox>.partBox>.partInputBox>select>option,
+#enchantHeader>.mainBox>.partBox>.partInputBox>select>option:disabled{
+  text-align: center;
+}
+
+@media (max-width: 520px) {
+  #enchantHeader>.mainBox>.searchBox>.searchInputBox,
+  #enchantHeader>.mainBox>.statusBox>.statusInputBox,
+  #enchantHeader>.mainBox>.partBox>.partInputBox{
+    flex-direction: column;
+  }
 }

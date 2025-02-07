@@ -25,16 +25,31 @@ const enchantSlice = createSlice({
     name: 'enchantSlice',
     initialState: initialState,
     reducers: {
-        updateSearchType: (state, action) => { state.searchType = action.payload.searchType },
-        updateSearchWord: (state, action) => { state.searchWord = action.payload.searchWord },
-        updateLocation: (state, action) => { state.location = action.payload.location },
-        updateStatus: (state, action) => { state.status = action.payload.status },
-        updateStatusDetail: (state, action) => { state.statusDetail = action.payload.statusDetail },
-        updatePart: (state, action) => { state.part = action.payload.part },
-        updatePartDetail: (state, action) => { state.partDetail = action.payload.partDetail }
+        updateSearchType: (state, action) => { state.searchType = action.payload },
+        updateSearchWord: (state, action) => { state.searchWord = action.payload },
+        updateLocation: (state, action) => { state.location = action.payload },
+        updateStatus: (state, action) => {
+            state.status = action.payload;
+            state.statusDetail = "";
+        },
+        updateStatusDetail: (state, action) => { state.statusDetail = action.payload },
+        updatePart: (state, action) => {
+            state.part = action.payload;
+            state.partDetail = "";
+        },
+        updatePartDetail: (state, action) => { state.partDetail = action.payload },
+        reset: (state) => {
+            state.searchType = "name";
+            state.searchWord = "";
+            state.location = "";
+            state.status = "";
+            state.statusDetail = "";
+            state.part = "";
+            state.partDetail = "";
+        }
     }
 });
 
 export const enchantActions = enchantSlice.actions;
-export const selectBaltane = (state: RootState) => state.baltane;
+export const selectEnchant = (state: RootState) => state.enchant;
 export default enchantSlice.reducer;

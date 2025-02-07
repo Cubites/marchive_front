@@ -1,0 +1,179 @@
+#dyeHeader{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #84A5D1;
+  padding: 20px 0;
+}
+#dyeHeader>.mainBox .nameBox{
+  width: 100px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#dyeHeader>.mainBox{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+/** searchBox **/
+#dyeHeader>.mainBox>.searchBox{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+#dyeHeader>.mainBox>.searchBox>.searchInputBox{
+  display: flex;
+  flex-direction: row;
+}
+#dyeHeader>.mainBox>.searchBox>.searchInputBox>input{
+  width: 200px;
+  height: 30px;
+  padding-left: 5px;
+  margin: 0 10px 10px 0;
+}
+#dyeHeader>.mainBox>.searchBox>.searchInputBox>.buttonBox{
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 10px 0;
+}
+#dyeHeader>.mainBox>.searchBox>.searchInputBox>.buttonBox>.searchBtn,
+#dyeHeader>.mainBox>.searchBox>.searchInputBox>.buttonBox>.resetBtn{
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  font-size: 14px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-use-select: none;
+  user-select: none;
+}
+#dyeHeader>.mainBox>.searchBox>.searchInputBox>.buttonBox>.searchBtn{
+  margin-right: 10px;
+  background-color: #fff;
+}
+#dyeHeader>.mainBox>.searchBox>.searchInputBox>.buttonBox>.searchBtn:active{
+  background-color: #c8d6e9;
+}
+#dyeHeader>.mainBox>.searchBox>.searchInputBox>.buttonBox>.resetBtn{
+  background-color: #AF4040;
+  color: #fff;
+}
+#dyeHeader>.mainBox>.searchBox>.searchInputBox>.buttonBox>.resetBtn:active{
+  background-color: #962c2c;
+}
+
+/** sourceBox **/
+#dyeHeader>.mainBox>.sourceBox{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+#dyeHeader>.mainBox>.sourceBox>.sourceInputBox{
+  display: flex;
+  flex-direction: row;
+}
+#dyeHeader>.mainBox>.sourceBox>.sourceInputBox>select{
+  width: 200px;
+  height: 30px;
+  margin: 0 10px 10px 0;
+}
+#dyeHeader>.mainBox>.sourceBox>.sourceInputBox>select>option,
+#dyeHeader>.mainBox>.sourceBox>.sourceInputBox>select>option:disabled{
+  text-align: center;
+  width: 200px;
+  white-space: normal;
+}
+
+/** colorBox **/
+#dyeHeader>.mainBox>.colorBox{
+  display: flex;
+  flex-direction: row;
+}
+#dyeHeader>.mainBox>.colorBox>.colorInputBox{
+  display: flex;
+  flex-direction: row;
+}
+#dyeHeader>.mainBox>.colorBox>.colorInputBox>.rgbBox,
+#dyeHeader>.mainBox>.colorBox>.colorInputBox>.hexBox{
+  width: 200px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+  margin: 0 0 10px 0;
+}
+#dyeHeader>.mainBox>.colorBox>.colorInputBox>.rgbBox{
+  margin-right: 10px;
+}
+#dyeHeader>.mainBox>.colorBox>.colorInputBox>.rgbBox>.selectBox,
+#dyeHeader>.mainBox>.colorBox>.colorInputBox>.hexBox>.selectBox{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#dyeHeader>.mainBox>.colorBox>.colorInputBox>.rgbBox>.selectBox>label,
+#dyeHeader>.mainBox>.colorBox>.colorInputBox>.hexBox>.selectBox>label{
+  font-size: 14px;
+  margin-left: 3px;
+}
+#dyeHeader>.mainBox>.colorBox>.colorInputBox input[type="label"]{
+  width: 30px;
+  margin-left: 3px;
+}
+#dyeHeader>.mainBox>.colorBox>.colorInputBox>.rgbBox>.rgbValue{
+  width: 45px;
+  height: 25px;
+  background-color: #c0d2e9;
+  border-radius: 5px;
+  text-align: center;
+}
+#dyeHeader>.mainBox>.colorBox>.colorInputBox>.hexBox>.hexValue{
+  width: 120px;
+  height: 25px;
+  background-color: #c0d2e9;
+  border-radius: 5px;
+  text-align: center;
+}
+#dyeHeader>.mainBox>.colorBox>.colorInputBox input::-webkit-outer-spin-button,
+#dyeHeader>.mainBox>.colorBox>.colorInputBox input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/** typeBox **/
+#dyeHeader>.mainBox>.typeBox{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#dyeHeader>.mainBox>.typeBox>.typeInputBox>select{
+  width: 200px;
+  height: 30px;
+  margin-right: 10px;
+}
+#dyeHeader>.mainBox>.typeBox>.typeInputBox>select>option,
+#dyeHeader>.mainBox>.typeBox>.typeInputBox>select>option:disabled{
+  text-align: center;
+  width: 200px;
+  white-space: normal;
+}
+
+@media (max-width: 520px) {
+  #dyeHeader>.mainBox>.searchBox>.searchInputBox,
+  #dyeHeader>.mainBox>.sourceBox>.sourceInputBox,
+  #dyeHeader>.mainBox>.colorBox>.colorInputBox{
+    flex-direction: column;
+  }
+}

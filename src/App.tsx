@@ -6,6 +6,7 @@ import TitlePage from './components/contents/titlePage/TitlePage';
 import SkillPage from './components/contents/skillPage/SkillPage';
 import KnightPage from './components/contents/knightPage/KnightPage';
 import EnchantPage from './components/contents/enchantPage/EnchantPage';
+import DyePage from './components/contents/dyePage/DyePage';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path='/skill' element={<SkillPage />} />
           <Route path='/knight' element={<KnightPage />} />
           <Route path='/enchant' element={<EnchantPage />} />
+          <Route path='/dye' element={<DyePage />} />
         </Routes>
       </div>
     </BrowserRouter>

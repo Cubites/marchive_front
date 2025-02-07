@@ -1,0 +1,86 @@
+#skillHeader{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #84A5D1;
+  padding: 20px 0;
+}
+#skillHeader .nameBox{
+  width: 100px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#skillHeader>.mainBox{
+  width: 510px;
+}
+/** talent, status **/
+#skillHeader>.mainBox>.talentBox,
+#skillHeader>.mainBox>.statusBox{
+  display: flex;
+  flex-direction: row;
+}
+#skillHeader>.mainBox>.talentBox>.talentInputBox,
+#skillHeader>.mainBox>.statusBox>.statusInputBox{
+  display: flex;
+  flex-wrap: wrap;
+}
+#skillHeader>.mainBox>.talentBox>.talentInputBox>select,
+#skillHeader>.mainBox>.statusBox>.statusInputBox>select{
+  width: 200px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+#skillHeader>.mainBox>.talentBox>.talentInputBox>select:first-child,
+#skillHeader>.mainBox>.statusBox>.statusInputBox>select:first-child{
+  margin-right: 10px;
+}
+#skillHeader>.mainBox>.talentBox>.talentInputBox>select>option,
+#skillHeader>.mainBox>.talentBox>.talentInputBox>select>option:disabled,
+#skillHeader>.mainBox>.statusBox>.statusInputBox>select>option,
+#skillHeader>.mainBox>.statusBox>.statusInputBox>select>option:disabled{
+  text-align: center;
+}
+/** sort **/
+#skillHeader>.mainBox>.sortList{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#skillHeader>.mainBox>.sortList>.nameBox{
+  width: 100px;
+  height: 30px;
+}
+#skillHeader>.mainBox>.sortList>.sortInputBox{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 410px;
+  background-color: #fff;
+}
+#skillHeader>.mainBox>.sortList>.sortInputBox>.checkOne{
+  width: 200px;
+  height: 30px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+#skillHeader>.mainBox>.sortList>.sortInputBox>.checkOne>input{
+  margin-right: 5px;
+}
+
+@media (max-width: 510px) {
+  #skillHeader>.mainBox>.talentBox>.talentInputBox,
+  #skillHeader>.mainBox>.statusBox>.statusInputBox{
+    width: 210px;
+  }
+  #skillHeader>.mainBox>.sortList>.sortInputBox{
+    width: 200px;
+  }
+}
