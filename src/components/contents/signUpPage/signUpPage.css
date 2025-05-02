@@ -1,0 +1,50 @@
+#loginPage{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 200px;
+}
+#loginPage>.socialLoginBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+  border: 2px solid #244a7a;
+  border-radius: 3px;
+}
+#loginPage>.socialLoginBox>.title{
+  font-size: 25px;
+  font-weight: bold;
+}
+#loginPage>.socialLoginBox>.nickname{
+  display: flex;
+  flex-direction: row;
+}
+#loginPage>.socialLoginBox>.nickname>.nicknameTitle{
+  width: 80px;
+  height: 30px;
+}
+#loginPage>.socialLoginBox>.nickname>input{
+  width: 150px;
+  height: 30px;
+  padding-left: 5px;
+  border: 1px solid #244a7a;
+  border-radius: 3px;
+}
+#loginPage>.socialLoginBox>.signUpButton{
+  width: 150px;
+  height: 40px;
+  background-color: #244a7a;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 3px;
+  cursor: pointer;
+}
+#loginPage>.socialLoginBox>.signUpButton:active{
+  background-color: #0f2e55;
+}

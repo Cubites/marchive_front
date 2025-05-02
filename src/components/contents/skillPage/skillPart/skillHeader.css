@@ -1,68 +1,72 @@
 #skillHeader{
-  width: 100%;
+  width: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #84A5D1;
-  padding: 20px 0;
 }
-#skillHeader .nameBox{
-  width: 100px;
+#skillHeader>.mainBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #c7d9f1;
+  border: 3px solid #244a7a;
+}
+
+#skillHeader>.mainBox>.boxTitle{
+  width: 250px;
   height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #244a7a;
+  padding-bottom: 20px;
 }
-#skillHeader>.mainBox{
-  width: 510px;
-}
+
 /** talent, status **/
 #skillHeader>.mainBox>.talentBox,
 #skillHeader>.mainBox>.statusBox{
   display: flex;
-  flex-direction: row;
-}
-#skillHeader>.mainBox>.talentBox>.talentInputBox,
-#skillHeader>.mainBox>.statusBox>.statusInputBox{
-  display: flex;
-  flex-wrap: wrap;
-}
-#skillHeader>.mainBox>.talentBox>.talentInputBox>select,
-#skillHeader>.mainBox>.statusBox>.statusInputBox>select{
-  width: 200px;
-  height: 30px;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 10px;
 }
-#skillHeader>.mainBox>.talentBox>.talentInputBox>select:first-child,
-#skillHeader>.mainBox>.statusBox>.statusInputBox>select:first-child{
-  margin-right: 10px;
+#skillHeader>.mainBox>.talentBox>select,
+#skillHeader>.mainBox>.statusBox>select{
+  width: 200px;
+  height: 30px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  border-radius: 3px;
+  border: 2px solid #244a7a;
 }
-#skillHeader>.mainBox>.talentBox>.talentInputBox>select>option,
-#skillHeader>.mainBox>.talentBox>.talentInputBox>select>option:disabled,
-#skillHeader>.mainBox>.statusBox>.statusInputBox>select>option,
-#skillHeader>.mainBox>.statusBox>.statusInputBox>select>option:disabled{
+#skillHeader>.mainBox>.talentBox>select>option,
+#skillHeader>.mainBox>.talentBox>select>option:disabled,
+#skillHeader>.mainBox>.statusBox>select>option,
+#skillHeader>.mainBox>.statusBox>select>option:disabled{
   text-align: center;
 }
+
 /** sort **/
 #skillHeader>.mainBox>.sortList{
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-#skillHeader>.mainBox>.sortList>.nameBox{
-  width: 100px;
-  height: 30px;
-}
-#skillHeader>.mainBox>.sortList>.sortInputBox{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 410px;
+  flex-direction: column;
+  align-items: start;
+  width: 200px;
+  font-size: 13px;
   background-color: #fff;
+  border-radius: 3px;
+  border: 2px solid #244a7a;
+  margin-bottom: 15px;
 }
-#skillHeader>.mainBox>.sortList>.sortInputBox>.checkOne{
+#skillHeader>.mainBox>.sortList>.checkOne{
   width: 200px;
   height: 30px;
   padding-left: 20px;
@@ -71,16 +75,61 @@
   justify-content: start;
   align-items: center;
 }
-#skillHeader>.mainBox>.sortList>.sortInputBox>.checkOne>input{
+#skillHeader>.mainBox>.sortList>.checkOne>input{
   margin-right: 5px;
 }
 
-@media (max-width: 510px) {
-  #skillHeader>.mainBox>.talentBox>.talentInputBox,
-  #skillHeader>.mainBox>.statusBox>.statusInputBox{
-    width: 210px;
+/* reset button */
+#skillHeader>.mainBox>.buttonBox>.resetBtn{
+  width: 120px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+}
+#skillHeader>.mainBox>.buttonBox>.resetBtn{
+  background-color: #AF4040;
+}
+#skillHeader>.mainBox>.buttonBox>.resetBtn:active{
+  background-color: #962c2c;
+}
+@media (max-width: 1200px) {
+  #skillHeader>.mainBox{
+    width: 500px;
   }
-  #skillHeader>.mainBox>.sortList>.sortInputBox{
+  #skillHeader>.mainBox>.talentBox,
+  #skillHeader>.mainBox>.statusBox{
+    flex-direction: row;
+  }
+  #skillHeader>.mainBox>.talentBox>select:first-child,
+  #skillHeader>.mainBox>.statusBox>select:first-child{
+    margin-right: 10px;
+  }
+  #skillHeader>.mainBox>.sortList{
+    width: 410px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 510px) {
+  #skillHeader>.mainBox{
+    width: 300px;
+  }
+  #skillHeader>.mainBox>.talentBox,
+  #skillHeader>.mainBox>.statusBox{
+    width: 210px;
+    flex-direction: column;
+  }
+  #skillHeader>.mainBox>.talentBox>select:first-child,
+  #skillHeader>.mainBox>.statusBox>select:first-child{
+    margin-right: 0;
+  }
+  #skillHeader>.mainBox>.sortList{
     width: 200px;
   }
 }

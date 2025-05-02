@@ -1,112 +1,231 @@
 #header{
   width: 100%;
-  height: 120px;
-  position: relative;
-  z-index: 100;
+  display: flex;
+  justify-content: center;
 }
-/* top */
-#header>.top{
-  width: 100%;
-  height: 80px;
+#header>.headerBox{
+  width: 1200px;
+  height: 60px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  color: #244a7a;
+  position: relative;
+  z-index: 100;
 }
-#header>.top>.logo{
+/* mainLogo */
+#header>.headerBox>.mainLogo{
   width: 150px;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-#header>.top>.logo>a{
-  width: 80%;
-  height: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 25px;
-}
-#header>.top>.loginbox{
-  width: 100px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#header>.top>.loginbox>.loginButton{
-  width: 80px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  font-weight: bold;
-  color: #fff;
-  background-color: #5785C1;
-  cursor: pointer;
-}
-#header>.top>.loginbox>.loginButton:hover{
-  background-color: #40628d;
+  font-size: 20px;
+  color: #244a7a;
 }
 
-/* bottom */
-#header>.bottom{
-  width: 100%;
-  height: 40px;
-  border: 1px solid #5785C1;
-  border-left: 0;
-  border-right: 0;
-  display: flex;
-  justify-content: top;
-  flex-wrap: wrap;
-  overflow: hidden;
-  background-color: #244a7a;
-}
-#header>.bottom:hover{
-  overflow: visible;
-}
-#header>.bottom>.menuButton{
-  width: 150px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  color: white;
-  border-right: 1px solid #ddd;
-  font-weight: bold;
-  font-size: 17px;
-}
-#header>.bottom>.menuDetails{
-  width: 100%;
+/* menuBox */
+#header>.headerBox>.menuBox{
+  width: calc(100% - 300px);
   display: flex;
   flex-direction: row;
-  justify-content: start;
-  border: 1px solid #244a7a;
-  background-color: #fff;
+  align-items: start;
   font-size: 14px;
+  font-weight: bold;
 }
-#header>.bottom>.menuDetails>div{
+#header>.headerBox>.menuBox>.menu{
   width: 150px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
 }
-#header>.bottom>.menuDetails>div>a{
-  width: 100%;
-  height: 40px;
+#header>.headerBox>.menuBox>.menu>.menuTop{
+  width: 150px;
+  height: 60px;
+  background-color: white;
+  z-index: 100;
+}
+#header>.headerBox>.menuBox>.menu>.menuTop>.menuName{
+  width: 150px;
+  height: 60px;
+}
+#header>.headerBox>.menuBox>.menu .arrow{
+  display: block;
+  width: 30px;
+  overflow: hidden;
+}
+#header>.headerBox>.menuBox>.menu>.menuBottom{
+  position: absolute;
+  top: 60px;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  transition-delay: 100ms;
+}
+#header>.headerBox>.menuBox>.menu>.menuBottom>a{
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 150px;
+  height: 40px;
+  background-color: white;
 }
-#header>.bottom>.menuDetails>div>a:hover{
-  background-color: #2e5d97;
-  color: #fff;
+#header>.headerBox>.menuBox>.menu>.menuBottom>a:hover{
+  color: #40628d;
 }
 
-@media (max-width: 600px) {
-  #header>.bottom>.menuButton{
-    width: 110px;
+/** menuBottom animation **/
+#header>.headerBox>.menuBox>.menu:hover{
+  overflow: visible;
+}
+#header>.headerBox>.menuBox>.menu:hover>.menuBottom{
+  opacity: 1;
+}
+
+/* login */
+#header>.headerBox>.login{
+  width: 60px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+#header>.headerBox>.login>.loginTop{
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: white;
+  z-index: 100;
+  cursor: pointer;
+}
+#header>.headerBox>.login>.loginBottom{
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  padding: 10px;
+  top: 60px;
+  right: 0;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  transition-delay: 100ms;
+}
+#header>.headerBox>.login>.loginBottom img{
+  width: 150px;
+  margin: 5px 0;
+}
+
+/** loginButton animation **/
+#header>.headerBox>.login:hover{
+  overflow: visible;
+}
+#header>.headerBox>.login:hover>.loginBottom{
+  opacity: 1;
+}
+
+/* mobile Menu */
+#header>.headerBox>.mobileMenuButton{
+  display: none;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* icon */
+#header>.headerBox img{
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
+#header>.headerBox>.menuBox>.menu .arrow{
+  display: none;
+}
+#header>.headerBox>.mobileMenuButton{
+  display: none;
+}
+
+
+@media (max-width: 1000px) {
+  /* show hidden button */
+  #header>.headerBox>.mobileMenuButton{
+    display: flex;
   }
-  #header>.bottom>.menuDetails>div{
-    width: 110px;
+  #header>.headerBox>.menuBox>.menu .arrow{
+    display: block;
+  }
+  /* show hidden button */
+
+  /* change Design from PC to Mobile */
+  #header>.headerBox>.menuBox{
+    position: absolute;
+    flex-direction: column;
+    width: 200px;
+    top: 60px;
+    left: -200px;
+    transition: all 0.2s ease-in-out;
+  }
+  #header>.headerBox>.menuBox>.menu{
+    width: 200px;
+    overflow: visible;
+  }
+  #header>.headerBox>.menuBox>.menu>.menuTop{
+    width: 200px;
+  }
+  #header>.headerBox>.menuBox>.menu>.menuTop>.menuName{
+    width: 150px;
+  }
+  #header>.headerBox>.menuBox>.menu>.menuTop>img{
+    width: 50px;
+  }
+  #header>.headerBox>.menuBox>.menu>.menuBottom{
+    position: relative;
+    opacity: 1;
+    width: 200px;
+    top: 0;
+  }
+  #header>.headerBox>.menuBox>.menu>.menuBottom>a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    background-color: white;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+    transition-delay: 100ms;
+  }
+  /* change Design from PC to Mobile */
+
+
+  /* animation */
+  /** menuBottom animation **/
+  #header>.headerBox>.mobileMenuButton:hover ~ .menuBox{
+    left: 0;
+  }
+  #header>.headerBox>.menuBox:hover{
+    left: 0;
+  }
+  #header>.headerBox>.menuBox>.menu:hover .menuBottom>a{
+    height: 40px;
   }
 }

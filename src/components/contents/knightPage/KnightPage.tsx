@@ -34,18 +34,25 @@ const KnightPage = () => {
 
   return (
     <div id="knightPage">
-      <div className='guideBox'>
-        <div className='inputGuide'>
-          <div>대화 회차 지정 - 현재까지 진행한 대화가 몇 회차인지 지정하는 버튼입니다.</div>
-          <div>대화 완료 횟수 - 오늘 해당 캐릭터와 성공한 대화 횟수를 입력해주세요. <span>대화를 실패하면 회차가 넘어지 않으니 성공한 횟수만 입력해주세요.</span></div>
-          <div>호감도 - 해당 멤버의 호감도를 입력해주세요.</div>
-          <div>호감도가 특정 퍼센트에 도달하면 일반 대화가 아닌 특별 대화를 선택해야합니다. <br/>특별 대화를 선택한 후에는 마지막으로 고른 일반 대화의 다음 대화를 이어서 선택하면 됩니다.</div>
+
+      <div className='banner'>
+        <p className="title jua-regular">특별조</p>
+        <div>
+          <p className="jua-regular">대화 회차 지정 - 현재까지 진행한 대화가 몇 회차인지 찾는 버튼입니다.</p>
+          <p className="jua-regular">대화 완료 횟수 - 오늘 해당 캐릭터와 성공한 대화 횟수를 입력해주세요. <span className="jua-regular notice">대화를 실패하면 회차가 넘어지 않으니 성공한 횟수만 입력해주세요.</span></p>
+          <p className="jua-regular">호감도 - 해당 멤버의 호감도를 입력해주세요.</p>
+          <br/>
+          <p className="jua-regular">일반 대화 - 대화 시 골라야하는 선택지 입니다.</p>
+          <p className="jua-regular">특별 대화 - 호감도가 특정 퍼센트에 도달하면 일반 대화가 아닌 특별 대화를 선택해야합니다. <span className="jua-regular">특별 대화를 선택한 후에는 마지막으로 고른 일반 대화의 다음 회차를 이어서 선택하면 됩니다.</span></p>
+          
         </div>
       </div>
+
       <div className='memberList'>
         {
           profile.map(({name, profile, talent}) => (
             <div className='memberBox' key={`alban${profile}`}>
+
               <div className='memberValueBox'>
                 <div className='scriptSearchBtn'>대화 회차 지정</div>
                 <div className='memberName'>{name}</div>
@@ -73,6 +80,7 @@ const KnightPage = () => {
                   </div>
                 </div>
               </div>
+
               <div className='memberScriptBox'>
                 <div className='normalScriptBox'>
                   <div className='header'>일반 대화</div>
@@ -91,13 +99,19 @@ const KnightPage = () => {
                   </div>
                 </div>
               </div>
-              <div className='lockedMember' onClick={() => unlockMember(profile, true)} style={{display: memberInfo[profile].unlock ? 'none' : 'flex'}}>
+              
+              <div 
+                className='lockedMember' 
+                onClick={() => unlockMember(profile, true)} style={{display: memberInfo[profile].unlock ? 'none' : 'flex'}}
+              >
                 <div className='unlockBtn'>조원 추가</div>
               </div>
+
             </div>
           ))
         }
       </div>
+      
     </div>
   )
 }

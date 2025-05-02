@@ -1,11 +1,11 @@
-#enchantList{
+#dyeList{
   width: 800px;
   height: 100vh;
   background-color: #999;
 }
 
 @media (max-width: 800px) {
-  #enchantList{
+  #dyeList{
     width: 100%;
   }
 }

@@ -51,83 +51,72 @@ const DyeHeader = () => {
     <div id='dyeHeader'>
       <div className='mainBox'>
 
+        <div className='boxTitle'>검색 조건</div>
+
         {/* searchBox */}
         <div className='searchBox'>
-          <div className='nameBox dragNo'>
-            <div>이름</div>
-          </div>
-          <div className="searchInputBox">
-            <input type='text' value={searchData.searchWord} onChange={handleSearchWord}/>
-            <div className="buttonBox">
-              <div className='searchBtn'>검색</div>
-              <div className='resetBtn' onClick={reset}>초기화</div>
-            </div>
-          </div>
+          <input
+            type='text'
+            placeholder='염색 앰플 이름'
+            onChange={handleSearchWord}
+            value={searchData.searchWord} />
         </div>
 
         {/* sourceBox */}
         <div className='sourceBox'>
-          <div className='nameBox dragNo'>
-            <div>출처</div>
-          </div>
-          <div className="sourceInputBox">
-            <select 
-              name='firstSourceCategory'
-              className='firstSourceCategory'
-              onChange={handleFirstSource}
-              value={searchData.firstSource}
-            >
-              <option value="">전체</option>
-              {
-                sources.map((data, index) => (
-                  <option value={data.eng} key={"firstSourceCategory" + index}>
-                    {data.name}
+          <select 
+            name='firstSourceCategory'
+            className='firstSourceCategory'
+            onChange={handleFirstSource}
+            value={searchData.firstSource}
+          >
+            <option value="">출처 전체</option>
+            {
+              sources.map((data, index) => (
+                <option value={data.eng} key={"firstSourceCategory" + index}>
+                  {data.name}
+                </option>
+              ))
+            }
+          </select>
+          <select
+            name='secondSourceCategory'
+            className='secondSourceCategory'
+            disabled={searchData.firstSource === "" ? true : false}
+            onChange={handleSecondSource}
+            value={searchData.secondSource}
+          >
+            <option value="">상세 출처 전체</option>
+            {
+              sources.map((data, index) => (
+                data.list.map((dd, idx) => (
+                  <option 
+                    value={dd}
+                    key={"secondSourceCategory"+index+`0${idx}`.substr(-2,2)}
+                    style={{display: searchData.firstSource === data.eng ? "block" : "none"}}
+                  >
+                    {dd}
                   </option>
                 ))
-              }
-            </select>
-            <select
-              name='secondSourceCategory'
-              className='secondSourceCategory'
-              disabled={searchData.firstSource === "" ? true : false}
-              onChange={handleSecondSource}
-              value={searchData.secondSource}
-            >
-              <option value="">전체</option>
-              {
-                sources.map((data, index) => (
-                  data.list.map((dd, idx) => (
-                    <option 
-                      value={dd}
-                      key={"secondSourceCategory"+index+`0${idx}`.substr(-2,2)}
-                      style={{display: searchData.firstSource === data.eng ? "block" : "none"}}
-                    >
-                      {dd}
-                    </option>
-                  ))
-                ))
-              }
-            </select>
-          </div>
+              ))
+            }
+          </select>
         </div>
 
         {/* colorBox */}
         <div className="colorBox">
-          <div className='nameBox dragNo'>
-            <div>색코드</div>
-          </div>
-          <div className="colorInputBox">
-            <div className="rgbBox">
-              <div className="selectBox">
-                <input 
-                  type="radio"
-                  name='colorType'
-                  id='rgb'
-                  className='colorType cursor'
-                  onChange={handleRGB.seleced}
-                  checked={searchData.color.rgb.selected} />
-                <label htmlFor='rgb' className='cursor'>RGB</label>
-              </div>
+          <div className="rgbBox">
+            <div className="selectBox">
+              <input 
+                type="radio"
+                name='colorType'
+                id='rgb'
+                className='colorType cursor'
+                onChange={handleRGB.seleced}
+                checked={searchData.color.rgb.selected} />
+              <label htmlFor='rgb' className='cursor'>RGB</label>
+            </div>
+            <div className='inputColor'>
               <input 
                 type='text' 
                 className='rgbValue' 
@@ -154,17 +143,19 @@ const DyeHeader = () => {
                 onChange={handleRGB.b}
                 value={searchData.color.rgb.b} />
             </div>
-            <div className="hexBox">
-              <div className="selectBox">
-                <input 
-                  type="radio"
-                  name='colorType'
-                  id='hex'
-                  className='colorType cursor'
-                  onChange={handleHex.selected}
-                  checked={searchData.color.hex.selected} />
-                <label htmlFor='hex' className='cursor'>HEX</label>
-              </div>
+          </div>
+          <div className="hexBox">
+            <div className="selectBox">
+              <input 
+                type="radio"
+                name='colorType'
+                id='hex'
+                className='colorType cursor'
+                onChange={handleHex.selected}
+                checked={searchData.color.hex.selected} />
+              <label htmlFor='hex' className='cursor'>HEX</label>
+            </div>
+            <div className='inputColor'>
               <input 
                 type="text"
                 name='hexValue'
@@ -180,26 +171,26 @@ const DyeHeader = () => {
 
         {/* typeBox */}
         <div className="typeBox">
-          <div className='nameBox dragNo'>
-            <div>종류</div>
-          </div>
-          <div className="typeInputBox">
-            <select 
-              name='typeCategory'
-              className='typeCategory'
-              onChange={handleType}
-              value={searchData.type}
-            >
-              <option value="">전체</option>
-              {
-                colorType.map((data, index) => (
-                  <option value={data} key={"typeCategory" + index}>
-                    {data}
-                  </option>
-                ))
-              }
-            </select>
-          </div>
+          <select 
+            name='typeCategory'
+            className='typeCategory'
+            onChange={handleType}
+            value={searchData.type}
+          >
+            <option value="">종류 전체</option>
+            {
+              colorType.map((data, index) => (
+                <option value={data} key={"typeCategory" + index}>
+                  {data}
+                </option>
+              ))
+            }
+          </select>
+        </div>
+
+        <div className="buttonBox">
+          <div className='resetBtn' onClick={reset}>초기화</div>
+          <div className='searchBtn'>검색</div>
         </div>
 
       </div>

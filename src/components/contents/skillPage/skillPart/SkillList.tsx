@@ -8,7 +8,8 @@ const SkillList = () => {
   return (
     <div id='skillList'>
       <div className='listBox'>
-        <div className='totalStat'>
+
+        <div className='totalStat dragNo'>
           <div className='tableHead'>
             {
               sumHeader.map((item, id) => (
@@ -24,8 +25,9 @@ const SkillList = () => {
             }
           </div>
         </div>
+
         <div className='skillList'>
-          <div className='skillHead'>
+          <div className='skillHead dragNo'>
             {
               skillInfo.map((item, id) => (
                 <div className='tab' key={'skh' + id}>{item}</div>
@@ -34,6 +36,7 @@ const SkillList = () => {
           </div>
           
         </div>
+
       </div>
     </div>
   )

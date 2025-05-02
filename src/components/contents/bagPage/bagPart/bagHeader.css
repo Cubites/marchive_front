@@ -1,0 +1,148 @@
+#bagHeader{
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+}
+
+/* mainBox */
+#bagHeader>.mainBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #c7d9f1;
+  border: 3px solid #244a7a;
+}
+
+#bagHeader>.mainBox>.boxTitle{
+  width: 250px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+/** nameSearch **/
+#bagHeader>.mainBox>.nameSearch{
+  width: 250px;
+  height: 30px;
+  padding: 5px;
+  font-size: 15px;
+  text-align: center;
+  border-radius: 3px;
+  border: 2px solid #244a7a;
+  margin-bottom: 10px;
+}
+
+/** bagSize, innerSize **/
+#bagHeader>.mainBox>.bagSizeBox,
+#bagHeader>.mainBox>.innerSizeBox{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 250px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  background-color: #c7d9f1;
+}
+#bagHeader>.mainBox .sizeW,
+#bagHeader>.mainBox .sizeH{
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#bagHeader>.mainBox .sizeW>img,
+#bagHeader>.mainBox .sizeH>img{
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+}
+#bagHeader>.mainBox .sizeW>input,
+#bagHeader>.mainBox .sizeH>input{
+  width: 85px;
+  height: 30px;
+  margin-left: 5px;
+  text-align: center;
+  border: 2px solid #244a7a;
+  border-radius: 3px;
+}
+
+/** summonEffect **/
+#bagHeader>.mainBox>.summonEffectBox{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 250px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+#bagHeader>.mainBox>.summonEffectBox>.effect{
+  width: 200px;
+  text-align: center;
+  border: 2px solid #244a7a;
+  border-radius: 3px;
+}
+#bagHeader>.mainBox>.summonEffectBox>.effectNumber{
+  width: 40px;
+  text-align: center;
+  border: 2px solid #244a7a;
+  border-radius: 3px;
+}
+
+/** category **/
+#bagHeader>.mainBox>.categoryBox{
+  width: 250px;
+  height: 30px;
+  text-align: center;
+  border-radius: 3px;
+  border: 2px solid #244a7a;
+  margin-bottom: 10px;
+}
+
+/** button **/
+#bagHeader>.mainBox>.buttonBox{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 250px;
+  height: 30px;
+}
+#bagHeader>.mainBox>.buttonBox>.resetBtn,
+#bagHeader>.mainBox>.buttonBox>.searchBtn{
+  width: 120px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+}
+#bagHeader>.mainBox>.buttonBox>.resetBtn{
+  background-color: #AF4040;
+}
+#bagHeader>.mainBox>.buttonBox>.resetBtn:active{
+  background-color: #962c2c;
+}
+#bagHeader>.mainBox>.buttonBox>.searchBtn{
+  background-color: #84A5D1;
+}
+#bagHeader>.mainBox>.buttonBox>.searchBtn:active{
+  background-color: #6c91c2;
+}
+

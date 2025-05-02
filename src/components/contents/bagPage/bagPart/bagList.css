@@ -1,0 +1,127 @@
+#bagList{
+  width: 800px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  background-color: #999;
+}
+
+/* bag */
+#bagList>.bagBox{
+  width: 720px;
+  height: 330px;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #244a7a;
+  font-size: 13px;
+}
+/** image & name **/
+#bagList>.bagBox>.imageName{
+  width: 180px;
+  height: 330px;
+  border: 1px solid #244a7a;
+  padding: 0 20px;
+}
+#bagList>.bagBox>.imageName>.bagName{
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#bagList>.bagBox>.infoBoxOne{
+  width: 360px;
+  height: 330px;
+  display: flex;
+  flex-direction: column;
+}
+
+/** infoOne, infoTwo **/
+#bagList>.bagBox .name,
+#bagList>.bagBox .content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#bagList>.bagBox .name{ 
+  width: 80px;
+  background-color: #39659b;
+  color: white;
+}
+#bagList>.bagBox>.infoBoxOne .name,
+#bagList>.bagBox>.infoBoxOne .content,
+#bagList>.bagBox>.infoBoxTwo .name,
+#bagList>.bagBox>.infoBoxTwo .content{
+  border: 1px solid #244a7a;
+}
+
+/*** infoOne ***/
+#bagList>.bagBox>.infoBoxOne .content{ width: 280px; }
+#bagList>.bagBox>.infoBoxOne>.resource,
+#bagList>.bagBox>.infoBoxOne>.summonEffect,
+#bagList>.bagBox>.infoBoxOne>.set{
+  display: flex;
+  flex-direction: row;
+}
+#bagList>.bagBox>.infoBoxOne>.resource>.name,
+#bagList>.bagBox>.infoBoxOne>.resource>.content{ height: 30px; }
+#bagList>.bagBox>.infoBoxOne>.summonEffect>.name,
+#bagList>.bagBox>.infoBoxOne>.summonEffect>.content{ height: 210px; }
+#bagList>.bagBox>.infoBoxOne>.set>.name,
+#bagList>.bagBox>.infoBoxOne>.set>.content{ height: 90px; }
+
+/*** infoTwo ***/
+#bagList>.bagBox>.infoBoxTwo{
+  width: 180px;
+  height: 330px;
+  display: flex;
+  flex-direction: column;
+}
+#bagList>.bagBox>.infoBoxTwo .infoTwo{
+  display: flex;
+  flex-direction: row;
+}
+#bagList>.bagBox>.infoBoxTwo .infoTwo>.name,
+#bagList>.bagBox>.infoBoxTwo .infoTwo>.content{
+  height: 30px;
+}
+#bagList>.bagBox>.infoBoxTwo .infoTwo>.content{ width: 100px; }
+#bagList>.bagBox>.infoBoxTwo>.trade{
+  display: flex;
+  flex-direction: row;
+  width: 180px;
+  height: 60px;
+}
+#bagList>.bagBox>.infoBoxTwo .tradeName{ 
+  width: 40px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #244a7a;
+  background-color: #39659b;
+  color: white;
+}
+#bagList>.bagBox>.infoBoxTwo>.trade>.tradeBox{
+  display: flex;
+  flex-direction: column;
+  width: 140px;
+  height: 60px;
+}
+#bagList>.bagBox>.infoBoxTwo>.trade>.tradeBox .name{ 
+  font-size: 11px;
+  width: 40px;
+}
+
+
+@media (max-width: 800px) {
+  #bagList{
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+
+}

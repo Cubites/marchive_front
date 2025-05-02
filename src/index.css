@@ -14,10 +14,12 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
+  box-sizing: border-box;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
   font-family: "Noto Sans", sans-serif;
+  -webkit-tap-highlight-color: transparent;
 }
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -71,4 +73,15 @@ input{
   font-family: "Jua", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+/* test */
+.banner{
+  background-color: #ddd;
+}
+
+.textCenter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

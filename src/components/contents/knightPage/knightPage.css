@@ -7,19 +7,28 @@
 }
 
 /* page guide */
-#knightPage>.guideBox{
-  width: 80%;
-  height: 100px;
-  margin: 30px 0;
-}
-#knightPage>.guideBox>.inputGuide{
+#knightPage>.banner{
+  width: 100%;
+  height: 300px;
   display: flex;
   flex-direction: column;
-  font-size: 14px;
-  color: #000;
+  justify-content: center;
+  align-items: center;
+  color: #244a7a;
+  white-space: pre-wrap;
+  padding: 0 150px;
 }
-#knightPage>.guideBox>.inputGuide>div{ margin: 5px 0; }
-#knightPage>.guideBox>.inputGuide>div>span{ font-size: bold; color: red; }
+#knightPage>.banner>.title{
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+#knightPage>.banner p {
+  line-height: 20px;
+}
+#knightPage>.banner .notice{ 
+  display: inline-block;
+  color: red; 
+}
 
 /* member info box */
 #knightPage>.memberList{
@@ -44,6 +53,7 @@
   justify-content: left;
   align-items: center;
   border: 2px solid #5785C1;
+  border-radius: 3px;
   margin-bottom: 10px;
 }
 #knightPage>.memberList>.memberBox>.memberValueBox>.scriptSearchBtn{
@@ -105,6 +115,8 @@
 #knightPage>.memberList>.memberBox>.memberValueBox>.talkFavorBox>.selectBox>select{
   width: 50px;
   margin: 2px 0;
+  border: 1px solid #5785C1;
+  border-radius: 2px;
 }
 
 /** script info box **/
@@ -112,6 +124,7 @@
   width: 100%;
   height: 300px;
   border: 1px solid #C5C5C5;
+  border-radius: 3px;
 }
 
 #knightPage>.memberList>.memberBox>.memberScriptBox>.normalScriptBox,
@@ -178,9 +191,16 @@
 }
 
 @media (max-width: 1200px) {
-  
+  #knightPage>.banner{
+    padding: 0 100px;
+  }  
 }
 
 @media (max-width: 600px) {
   
+}
+@media (max-width: 520px) {
+  #enchantPage>.banner{
+    padding: 0 30px;
+  }
 }

@@ -35,7 +35,14 @@ const skillSlice = createSlice({
             
         },
         updateStatus2: (state, action) => { state.status2 = action.payload },
-        updateSort: (state, action) => { state.sort = action.payload }
+        updateSort: (state, action) => { state.sort = action.payload },
+        reset: (state) => {
+            state.talent1 = "";
+            state.talent2 = "";
+            state.status1 = "";
+            state.status2 = "";
+            state.sort = "name";
+        }
     }
 });
 

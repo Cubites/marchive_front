@@ -1,4 +1,4 @@
-#enchantPage{
+#bagPage{
   width: 100%;
   z-index: 10;
   display: flex;
@@ -6,7 +6,7 @@
   align-items: center;
 }
 
-#enchantPage>.banner{
+#bagPage>.banner{
   width: 100%;
   height: 300px;
   display: flex;
@@ -14,35 +14,27 @@
   justify-content: center;
   align-items: center;
   color: #244a7a;
-  padding: 0 150px;
 }
-#enchantPage>.banner>p{
+#bagPage>.banner>p{
   font-size: 15px;
 }
-#enchantPage>.banner>p.title{
+#bagPage>.banner>p.title{
   font-size: 30px;
   padding: 20px;
 }
 
-#enchantPage>.enchantContainer{
+#bagPage>.bagContainer{
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: start;
 }
 
-@media (max-width: 1200px) {
-  #enchantPage>.enchantContainer{
+@media (max-width: 1100px) {
+  #bagPage>.bagContainer{
     flex-direction: column;
+  }
+  #bagPage>.bagContainer{
     align-items: center;
-  }
-  #enchantPage>.banner{
-    padding: 0 100px;
-  }
-}
-
-@media (max-width: 520px) {
-  #enchantPage>.banner{
-    padding: 0 30px;
   }
 }

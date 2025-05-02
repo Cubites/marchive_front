@@ -1,5 +1,6 @@
 #skillList{
-  width: 100%;
+  width: 800px;
+  height: 100vh;
 }
 /* skill Area */
 #skillList>.listBox{
@@ -87,6 +88,9 @@
 }
 
 @media (max-width: 780px) {
+  #skillList{
+    width: 100%;
+  }
   #skillList>.listBox>.skillList{
     align-self: flex-start;
   }

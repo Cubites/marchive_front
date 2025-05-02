@@ -2,7 +2,7 @@ import './enchantList.css';
 
 const EnchantList = () => {
   return (
-    <div>
+    <div id='enchantList'>
         
     </div>
   )
