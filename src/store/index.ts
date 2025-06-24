@@ -5,6 +5,7 @@ import baltaneReducer from './baltane';
 import enchantReducer from './enchant';
 import dyeReducer from './dye';
 import bagReducer from './bag';
+import loginReducer from './login';
 
 const store = configureStore({
     reducer: {
@@ -14,6 +15,7 @@ const store = configureStore({
         enchant: enchantReducer,
         dye: dyeReducer,
         bag: bagReducer,
+        login: loginReducer
     }
 });
 

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 import './header.css';
 import { useAppSelector, useAppDispatch } from '../../hooks';
 import { selectHeader, headerActions } from '../../store/header';
@@ -8,12 +9,9 @@ const Header = () => {
   const searchData = useAppSelector(selectHeader);
   const dispatch = useAppDispatch();
 
-  const redirectOAuth2 = async (sns:string) => {
+  const redirectOAuth2 = async (sns: string) => {
     let loginLink: string = process.env.REACT_APP_SNS_LOGIN_URI || "";
-    const redirectURI: string = "http://marchive.test/login";
-    
-    loginLink += `/oauth2/authorization/${sns}?redirect_uri=` + redirectURI;
-    
+    loginLink += `/oauth2/authorization/${sns}`;
     window.location.href = loginLink;
   }
 

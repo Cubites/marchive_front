@@ -2,11 +2,13 @@ import { createSlice } from "@reduxjs/toolkit";
 import { RootState } from ".";
 
 interface headerState {
-    menuOn: boolean
+    menuOn: boolean,
+    isLogin: boolean
 }
 
 const initialState: headerState = {
-    menuOn: false
+    menuOn: false,
+    isLogin: false
 } 
 
 const headerSlice = createSlice({
@@ -15,10 +17,12 @@ const headerSlice = createSlice({
     reducers: {
         onOff: (state, action) => {
             state.menuOn = action.payload;
+        }, 
+        checkLogin: (state, action) => {
+            state.isLogin = action.payload;
         }
     }
-})
-
+});
 
 export const headerActions = headerSlice.actions;
 export const selectHeader = (state: RootState) => state.header;

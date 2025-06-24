@@ -7,7 +7,7 @@ import KnightPage from './components/contents/knightPage/KnightPage';
 import EnchantPage from './components/contents/enchantPage/EnchantPage';
 import DyePage from './components/contents/dyePage/DyePage';
 import BagPage from './components/contents/bagPage/BagPage';
-import SignUpPage from './components/contents/signUpPage/SignUpPage';
+import SignUpPage from './components/contents/LoginPage/SignUpPage';
 
 function App() {
   return (
@@ -21,7 +21,8 @@ function App() {
           <Route path='/enchant' element={<EnchantPage />} />
           <Route path='/dye' element={<DyePage />} />
           <Route path='/bag' element={<BagPage />} />
-          <Route path='/login' element={<SignUpPage />} />
+          <Route path='/login/*' element={<SignUpPage />} />
+          <Route path='/register' element={<SignUpPage />} />
         </Routes>
       </div>
     </BrowserRouter>
